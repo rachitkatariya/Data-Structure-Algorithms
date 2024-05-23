@@ -8,7 +8,7 @@ int main()
 
     // Even or Odd
 
-   /*  int num;
+   int num;
     cout<<"enter the number : ";
     cin>>num;
 
@@ -16,12 +16,12 @@ int main()
         cout<<"number is even";
     } else {
         cout<<"number is odd";
-    } */
+    } 
 
 
     // Find Greates number
 
-    /* int a, b;
+    int a, b;
     cout << "Enter a ";
     cin >> a;
 
@@ -36,12 +36,12 @@ int main()
     else
     {
         cout << "b is larger  : " << b;
-    } */
+    } 
 
 
     // Calculating Tax
 
-    /* int income;
+    int income;
     float tax;
     cout<< "enter income ( in Lakhs ) : ";
     cin>>income;
@@ -58,7 +58,7 @@ int main()
         tax = 0.3 * income; 
     }
 
-    cout<<"Tax = " << (tax * 100000) << endl; */
+    cout<<"Tax = " << (tax * 100000) << endl;
 
 
     
