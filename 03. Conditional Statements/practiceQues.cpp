@@ -61,8 +61,6 @@ int main()
     cout<<"Tax = " << (tax * 100000) << endl;
 
 
-    
-
     // Find largest number b/w in three numbers
 
     int a,b,c;
