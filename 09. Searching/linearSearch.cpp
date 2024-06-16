@@ -14,6 +14,6 @@ int main() {
     int arr[] = {2, 4, 5, 7, 8, 12, 10, 15};
     int n = sizeof(arr) / sizeof(int);
 
-    cout << linearSearch(arr, n, 10);
+    cout << linearSearch(arr, n, 10); 
 }
 
