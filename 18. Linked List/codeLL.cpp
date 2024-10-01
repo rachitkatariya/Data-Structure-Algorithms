@@ -12,8 +12,7 @@ using namespace std;
 
 class Node
 {
-    public:
-
+public:
     int data;
     Node *next;
 
@@ -21,6 +20,13 @@ class Node
     {
         data = val;
         next = NULL;
+    }
+
+    ~Node() {
+        if(next != NULL){
+            delete next;
+            next = NULL;
+        }
     }
 };
 
@@ -90,7 +96,48 @@ public:
         temp->next = newNode;
     }
 
-    void printList() {
+    void pop_front(){
+        if(head == NULL){
+            cout << "LL is empty";
+            return;
+        }
+
+        Node* temp = head;
+        head = head->next;
+        
+        temp->next = NULL;
+        delete temp;
+    }
+
+    void pop_tail(){
+        if(head == NULL){
+            cout << "LL is empty";
+            return;
+        }
+
+        Node* temp = head;
+        head = head->next;
+        
+        temp->next = NULL;
+        delete temp;
+    }
+
+    int searchItr(int key){
+        Node* temp = head;
+        int idx = 0;
+
+        while(temp != NULL){
+            if(temp->data == key){
+                return idx;
+            }
+
+            temp = temp->next;
+            idx++;
+        }
+        return -1;
+    }
+
+    void printList(){
         Node* temp = head;
 
         while(temp != NULL){
@@ -105,19 +152,26 @@ int main()
 {
     List ll;
 
+    ll.push_front(5);
+    ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
 
-    ll.printList(); // 1->2->3->Null
+    ll.printList(); // 1->2->3->4->5->Null
 
-    ll.push_back(4);
+    cout << ll.searchItr(5) << endl;
+
+    // ll.pop_front();
+    // ll.printList();
+
+    /* ll.push_back(4);
     ll.push_back(5);
     
     ll.printList(); // 1 -> 2 -> 3 -> 4 -> 5 -> NULL
 
     ll.insertMid(100,2); //1 -> 2 -> 100 -> 3 -> 4 -> 5 -> NULL
-    ll.printList();
+    ll.printList(); */
 
 
     return 0;
